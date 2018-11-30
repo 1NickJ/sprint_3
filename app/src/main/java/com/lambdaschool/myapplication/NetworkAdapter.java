@@ -29,9 +29,10 @@ public class NetworkAdapter {
                     while(line != null) {
                         builder.append(line);
                         line = reader.readLine();
-                    }
 
+                    }
                     result = builder.toString();
+
                 }
             } else {
                 result = String.valueOf(responseCode);
@@ -41,7 +42,7 @@ public class NetworkAdapter {
         }catch (IOException e) {
             e.printStackTrace();
         }finally {
-            if(connection != null) {
+            if (connection != null) {
                 connection.disconnect();
             }
 
@@ -56,3 +57,4 @@ public class NetworkAdapter {
         return result;
     }
 }
+
